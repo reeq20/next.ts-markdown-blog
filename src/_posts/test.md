@@ -1,6 +1,16 @@
 ---
 title:Sample
 ---
+
 Test
 
-#Test
+# Test
+
+[Google](http://google.com "Title")
+
+```js
+test()
+{
+    return 'test'
+}
+```
