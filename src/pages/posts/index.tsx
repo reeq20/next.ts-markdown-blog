@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const { data } = matter(fileData);
     return {
       meta: data,
-      path: `posts${paths}`,
+      path: `/posts${paths}`,
     };
   });
   return {
