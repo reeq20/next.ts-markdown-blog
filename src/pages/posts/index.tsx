@@ -32,7 +32,7 @@ const PostIndexList: NextPage<Props> = ({ posts }) => {
 };
 const postsDirectory = join(process.cwd(), "src/_posts");
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({}) => {
   const entries = glob.sync(`${postsDirectory}/**/*.md`);
   const posts = entries.map((v) => {
     const paths = v
