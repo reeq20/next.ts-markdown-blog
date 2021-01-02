@@ -12,22 +12,24 @@ import html from "remark-html";
 import glob from "glob";
 import { Params } from "next/dist/next-server/server/router";
 import matter from "gray-matter";
+import { Head } from "next/document";
 
 type Props = {
   post: {
-    date: string;
-    title: string;
-    content: string[];
-    data: any;
-    test: any;
+    meta: { title: string; date: string };
+    content: any;
   };
 };
 
 const Post: NextPage<Props> = ({ post }: Props) => {
-  console.log(post.test);
   return (
     <>
+      <Head>
+        <title>{post.meta.title}</title>
+      </Head>
       <article>
+        <h1>{post.meta.title}</h1>
+        <time>{post.meta.date}</time>
         <div dangerouslySetInnerHTML={createMarkup(post.content)} />
       </article>
     </>
@@ -55,10 +57,8 @@ export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
   return {
     props: {
       post: {
-        date: "2020",
-        title: data,
+        meta: data,
         content: postContent,
-        test: fileContents,
       },
     },
   };

@@ -1,8 +1,7 @@
 ---
-title:Sample
+title: Sample
+date: 2020
 ---
-
-Test
 
 # Test
 
