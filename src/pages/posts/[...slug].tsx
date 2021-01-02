@@ -1,3 +1,4 @@
+import Head from "next/head";
 import {
   GetStaticPaths,
   GetStaticPathsContext,
@@ -6,13 +7,11 @@ import {
 } from "next";
 import fs from "fs";
 import { join } from "path";
-import { useRouter } from "next/router";
 import remark from "remark";
 import html from "remark-html";
 import glob from "glob";
 import { Params } from "next/dist/next-server/server/router";
 import matter from "gray-matter";
-import { Head } from "next/document";
 
 type Props = {
   post: {
@@ -35,6 +34,7 @@ const Post: NextPage<Props> = ({ post }: Props) => {
     </>
   );
 };
+
 const postsDirectory = join(process.cwd(), "src/_posts");
 
 function createMarkup(htmlContents) {
