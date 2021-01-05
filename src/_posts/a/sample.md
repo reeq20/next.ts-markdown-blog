@@ -1,5 +1,5 @@
 ---
-title: sample
+title: a/sample
 ---
 
 

@@ -20,7 +20,7 @@ const PostIndexList: NextPage<Props> = ({ posts }) => {
         <ul>
           {posts.map((v, index) => (
             <li className="item" key={index}>
-              <Link href={v.path}>
+              <Link href={v.path} as={v.path}>
                 <a href="">{v.meta.title}</a>
               </Link>
             </li>
