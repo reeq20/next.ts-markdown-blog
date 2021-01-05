@@ -8,9 +8,9 @@ const Test = ({ posts, params }) => {
   return (
     <>
       <h1>test</h1>
-      {params.directory}の記事一覧
+      {params?.directory}の記事一覧
       <ul>
-        {posts.map((v, index) => (
+        {posts?.map((v, index) => (
           <li className="item" key={index}>
             <Link href={v.path} as={v.path}>
               <a href="">{v.meta.title}</a>
@@ -52,6 +52,13 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const entryPaths = fs.readdirSync(postsDirectory);
+  // if (
+  //   entryPaths.some((v) => {
+  //     v.match(/\.md$/);
+  //   })
+  // ) {
+  //   return;
+  // }
   const paths = [...entryPaths]
     .filter((name) => {
       return !name.match(/\.md$/);
