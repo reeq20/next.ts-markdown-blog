@@ -8,3 +8,11 @@ title: s/sample
 - すごい
 - すごいぞ
 - すごすぎる
+
+```js file.js
+const test = '';
+
+const asyncFunc = async() =>{
+    return await loader('./src/_posts/xxx.js')
+}
+```

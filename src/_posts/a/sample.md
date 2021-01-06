@@ -4,7 +4,8 @@ title: a/sample
 
 
 # test
-これはmdx sample
+これはmarkdown sample
 - すごい
 - すごいぞ
 - すごすぎる
+
