@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>BlogName</title>
+        <title>Blog Name sample</title>
       </Head>
       <Component {...pageProps} />
     </>
